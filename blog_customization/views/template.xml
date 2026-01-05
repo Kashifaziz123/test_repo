@@ -1,0 +1,30 @@
+<odoo>
+  <template id="post_cover_image_inherit"
+            inherit_id="website_blog.post_cover_image">
+
+    <xpath expr="//t[@t-call='website.record_cover']" position="replace">
+
+      <!-- If card image exists -->
+      <t t-if="blog_post.card_image">
+
+        <!-- Inject our background BEFORE calling record_cover -->
+        <t t-set="_bg"
+           t-value="'url(/web/image/blog.post/%d/card_image)' % blog_post.id" />
+
+        <t t-call="website.record_cover">
+          <t t-set="_record" t-value="blog_post"/>
+        </t>
+
+      </t>
+
+      <!-- Otherwise fallback normally -->
+      <t t-else="">
+        <t t-call="website.record_cover">
+          <t t-set="_record" t-value="blog_post"/>
+        </t>
+      </t>
+
+    </xpath>
+
+  </template>
+</odoo>

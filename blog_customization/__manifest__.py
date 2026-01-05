@@ -5,6 +5,7 @@
     'depends': ['website_blog'],
     'data': [
         'views/blog_post_views.xml',
+        'views/template.xml',
     ],
 
     'installable': True,
