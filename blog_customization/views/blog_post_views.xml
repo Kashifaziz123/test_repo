@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <record id="view_blog_post_form_inherit_card_image" model="ir.ui.view">
+        <field name="name">blog.post.form.card.image</field>
+        <field name="model">blog.post</field>
+        <field name="inherit_id" ref="website_blog.view_blog_post_form"/>
+        <field name="arch" type="xml">
+
+            <xpath expr="//sheet/group[@name='blog_details']" position="before">
+                <div class="oe_right oe_avatar">
+                    <field name="card_image" widget="image" class="oe_avatar"/>
+                </div>
+            </xpath>
+
+        </field>
+    </record>
+
+</odoo>
