@@ -35,9 +35,10 @@ class Lead(models.Model):
         <p><strong>Customer Information:</strong></p>
         <ul>
             <li><strong>Name:</strong> {form.get('name')}</li>
-            <li><strong>Email:</strong> {form.get('email')}</li>
+            <li><strong>Email:</strong> {form.get('email_from')}</li>
             <li><strong>Phone:</strong> {form.get('phone')}</li>
             <li><strong>Company:</strong> {form.get('partner_name')}</li>
+            <li><strong>Subject:</strong> {form.get('name')}</li>
         </ul>
 
         <p><strong>Inquiry Details:</strong></p>
